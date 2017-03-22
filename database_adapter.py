@@ -21,28 +21,27 @@ def get_db():
 # creates all the tables, if not already created
 def init():
     c = get_db()
-    c.execute("DROP TABLE IF EXISTS users")
-    c.execute("CREATE TABLE users (user TEXT NOT NULL UNIQUE PRIMARY KEY, "
-              "firstname TEXT NOT NULL, "
-              "familyname TEXT NOT NULL, "
-              "gender TEXT NOT NULL, "
-              "city TEXT NOT NULL, "
-              "country TEXT NOT NULL)"
+    c.execute("DROP TABLE IF EXISTS storage")
+    c.execute("CREATE TABLE storage (id INTEGER PRIMARY KEY, "
+              "city TEXT NOT NULL)"
               )
-    c.execute("DROP TABLE IF EXISTS messages")
-    c.execute("CREATE TABLE messages (id INTEGER PRIMARY KEY, "
-              "user TEXT NOT NULL,"
-              "writer TEXT NOT NULL,"
-              "message TEXT NOT NULL)"
+    c.execute("DROP TABLE IF EXISTS products")
+    c.execute("CREATE TABLE products (id INTEGER PRIMARY KEY, "
+              "name TEXT NOT NULL,"
+              "price INTEGER UNSIGNED NOT NULL)"
               )
-    c.execute("DROP TABLE IF EXISTS passwords")
-    c.execute("CREATE TABLE passwords (user TEXT NOT NULL UNIQUE PRIMARY KEY, "
-              "password TEXT NOT NULL,"
-              "salt TEXT NOT NULL)"
+    c.execute("DROP TABLE IF EXISTS io")
+    c.execute("CREATE TABLE io (id INTEGER PRIMARY KEY, "
+              "date DATE NOT NULL, "
+              "product TEXT NOT NULL, "
+              "storage TEXT NOT NULL, "
+              "amount INTEGER NOT NULL)"
               )
-    c.execute("DROP TABLE IF EXISTS loggedinusers")
-    c.execute("CREATE TABLE loggedinusers (user TEXT NOT NULL UNIQUE PRIMARY KEY, "
-              "token TEXT NOT NULL)"
+    c.execute("DROP TABLE IF EXISTS stock")
+    c.execute("CREATE TABLE stock (id INTEGER PRIMARY KEY, "
+              "produkt TEXT NOT NULL, "
+              "storage TEXT NOT NULL, "
+              "balance INTEGER NOT NULL)"
               )
     c.commit()
 
