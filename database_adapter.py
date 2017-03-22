@@ -16,18 +16,20 @@ def get_db():
     db = getattr(g, 'db', None)
     if db is None:
         db = g.db = connect_db()
+
     return db
+
 
 # creates all the tables, if not already created
 def init():
     c = get_db()
-    c.execute("DROP TABLE IF EXISTS storage")
-    c.execute("CREATE TABLE storage (id INTEGER PRIMARY KEY, "
+    c.execute("DROP TABLE IF EXISTS storages")
+    c.execute("CREATE TABLE storages (id INTEGER PRIMARY KEY, "
               "city TEXT NOT NULL)"
               )
     c.execute("DROP TABLE IF EXISTS products")
     c.execute("CREATE TABLE products (id INTEGER PRIMARY KEY, "
-              "name TEXT NOT NULL,"
+              "name TEXT NOT NULL, "
               "price INTEGER UNSIGNED NOT NULL)"
               )
     c.execute("DROP TABLE IF EXISTS io")
@@ -35,18 +37,27 @@ def init():
               "date DATE NOT NULL, "
               "product TEXT NOT NULL, "
               "storage TEXT NOT NULL, "
-              "amount INTEGER NOT NULL)"
+              "amount INTEGER NOT NULL, "
+              "FOREIGN KEY (product) REFERENCES products(id), "
+              "FOREIGN KEY (storage) REFERENCES storages(id))"
               )
     c.execute("DROP TABLE IF EXISTS stock")
     c.execute("CREATE TABLE stock (id INTEGER PRIMARY KEY, "
-              "produkt TEXT NOT NULL, "
+              "product TEXT NOT NULL, "
               "storage TEXT NOT NULL, "
-              "balance INTEGER NOT NULL)"
+              "balance INTEGER NOT NULL, "
+              "FOREIGN KEY (product) REFERENCES products(id), "
+              "FOREIGN KEY (storage) REFERENCES storages(id))"
               )
     c.commit()
 
 
-def get_users():
+def get_storages():
     c = get_db()
-    t = c.execute("SELECT username FROM users")
-    return t.fetchone()
+    u = c.execute("SELECT city FROM storages")
+    result = u.fetchall()
+    storages = []
+    for row in result:
+        data = row[0]
+        storages.append(data)
+    return storages
