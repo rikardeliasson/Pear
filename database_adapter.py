@@ -10,7 +10,7 @@ def connect_db():
     return conn
 
 
-# get the database
+# gets the database
 def get_db():
     # type: () -> object
     db = getattr(g, 'db', None)
@@ -52,6 +52,8 @@ def init():
     c.commit()
 
 
+# At this time only for testing
+# returns all storage city names
 def get_storages():
     # type: () -> object
     c = get_db()
@@ -64,6 +66,7 @@ def get_storages():
     return storages
 
 
+# returns city name of the storage with called id
 def get_storage_by_id(storage_id):
     # type: (int) -> str
     c = get_db()
@@ -72,6 +75,7 @@ def get_storage_by_id(storage_id):
     return ''.join(u.fetchone())
 
 
+# returns the name of the product with called id
 def get_product_by_id(product_id):
     # type: (int) -> str
     c = get_db()
@@ -97,6 +101,12 @@ def storage_exists(storage_name):
     return u.fetchone() is not None
 
 
+# TODO: if , provide help functions for duplicate prevention
+# for the time being, we believe that two shipments by all means could occur at the same date,
+# from the same storage, with equal amount of the same product.
+# Lets say there is a main storage that distributes a product evenly
+# Possibly next release: id based on order number or similar existing identifier for shipment.
+# adds io shipment
 def add_io(ship_date, product_name, storage_name, ship_amount):
     # type: (Date, string, string, int) -> bool
     c = get_db()

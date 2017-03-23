@@ -6,18 +6,25 @@ import json
 
 app = Flask(__name__)
 
+# methods can be called by entering specific url in browser
+# rather by calls from html elements, in final version
 
+
+# returns main html page
 @app.route('/')
 def root():
     return render_template("client.html")
 
 
+# initializes the database
 @app.route('/init_db')
 def init_db():
     db.init()
     return "Database Initialized"
 
 
+# At this time only for testing
+# returns all storage city names
 @app.route('/print')
 def print_storages():
     storages = db.get_storages()
@@ -27,6 +34,7 @@ def print_storages():
         return create_response(False, "Failed to retrieve storages")
 
 
+# returns city name of the storage with called id
 @app.route("/get_storage_by_id/<storage_id>")
 def get_storage_by_id(storage_id):
     data = db.get_storage_by_id(storage_id)
@@ -36,6 +44,7 @@ def get_storage_by_id(storage_id):
         return create_response(False, "No such storage")
 
 
+# returns the name of the product with called id
 @app.route("/get_product_by_id/<product_id>")
 def get_product_by_id(product_id):
     data = db.get_product_by_id(product_id)
@@ -45,6 +54,7 @@ def get_product_by_id(product_id):
         return create_response(False, "No such product")
 
 
+# adds io shipment
 @app.route("/add_io/<ship_date>/<product_name>/<storage_name>/<ship_amount>")
 def add_io(ship_date, product_name, storage_name, ship_amount):
     if db.add_io(ship_date, product_name, storage_name, ship_amount):
