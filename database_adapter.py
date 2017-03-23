@@ -96,12 +96,12 @@ def product_exists(product_name):
 # check if storage exists
 def storage_exists(storage_name):
     # type: (str) -> bool
-    c = get_db();
+    c = get_db()
     u = c.execute("SELECT city FROM storages WHERE city = ?", (storage_name,))
     return u.fetchone() is not None
 
 
-# TODO: if , provide help functions for duplicate prevention
+# TODO: if found necessary, provide help functions for duplicate prevention
 # for the time being, we believe that two shipments by all means could occur at the same date,
 # from the same storage, with equal amount of the same product.
 # Lets say there is a main storage that distributes a product evenly
@@ -113,6 +113,19 @@ def add_io(ship_date, product_name, storage_name, ship_amount):
     if product_exists(product_name) and storage_exists(storage_name):
         c.execute("INSERT INTO io (date, product, storage, amount) VALUES (?,?,?,?)",
                   (ship_date, product_name, storage_name, ship_amount))
+        c.commit()
+        return True
+    else:
+        return False
+
+
+# adds stock
+def add_stock(product_name, storage_name, current_balance):
+    # type: (string, string, int) -> bool
+    c = get_db()
+    if product_exists(product_name) and storage_exists(storage_name):
+        c.execute("INSERT INTO stock (product, storage, balance) VALUES (?,?,?)",
+                  (product_name, storage_name, current_balance))
         c.commit()
         return True
     else:

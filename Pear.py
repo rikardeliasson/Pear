@@ -63,6 +63,15 @@ def add_io(ship_date, product_name, storage_name, ship_amount):
         return create_response(False, "Failed to create io")
 
 
+# adds stock
+@app.route("/add_stock/<product_name>/<storage_name>/<current_balance>")
+def add_stock(product_name, storage_name, current_balance):
+    if db.add_stock(product_name, storage_name, current_balance):
+        return create_response(True, "stock created")
+    else:
+        return create_response(False, "Failed to create stock")
+
+
 # creates a JSON response with additional data
 def create_response_data(success, message, data):
     print message
