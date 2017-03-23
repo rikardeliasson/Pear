@@ -53,6 +53,7 @@ def init():
 
 
 def get_storages():
+    # type: () -> object
     c = get_db()
     u = c.execute("SELECT city FROM storages")
     result = u.fetchall()

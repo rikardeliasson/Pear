@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5f7dc04b-1555-4026-bc2a-e0c4402cb9f6" name="Default" comment="">
+    <list default="true" id="5f7dc04b-1555-4026-bc2a-e0c4402cb9f6" name="Default" comment="add relations to database and make storages data availabla through /print...server running old html for some reason though">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database.db" afterPath="$PROJECT_DIR$/database.db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pear.py" afterPath="$PROJECT_DIR$/Pear.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database_adapter.py" afterPath="$PROJECT_DIR$/database_adapter.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/client.js" afterPath="$PROJECT_DIR$/static/client.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/stylesheet.css" afterPath="$PROJECT_DIR$/static/stylesheet.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/client.html" afterPath="$PROJECT_DIR$/templates/client.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,8 +17,8 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Pear$Pear__1_.coverage" NAME="Pear (1) Coverage Results" MODIFIED="1490223173872" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Pear$Pear.coverage" NAME="Pear Coverage Results" MODIFIED="1490221999360" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/Pear$Pear__1_.coverage" NAME="Pear (1) Coverage Results" MODIFIED="1490224717228" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Pear$Pear.coverage" NAME="Pear Coverage Results" MODIFIED="1490230671519" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -26,11 +26,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Pear.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Pear.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Pear.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="21" lean-forward="true" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+            <state relative-caret-position="442">
+              <caret line="32" column="77" lean-forward="true" selection-start-line="32" selection-start-column="77" selection-end-line="32" selection-end-column="77" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -41,21 +41,9 @@
       <file leaf-file-name="stylesheet.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/stylesheet.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="272">
+              <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="client.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/client.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="23" column="33" lean-forward="true" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
-              <folding>
-                <element signature="n#!!doc;n#getStorages#0" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -63,9 +51,21 @@
       <file leaf-file-name="client.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/client.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+            <state relative-caret-position="221">
+              <caret line="13" column="34" lean-forward="true" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="client.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/static/client.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="19" column="9" lean-forward="true" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+              <folding>
+                <element signature="n#!!doc;n#getStorages#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -73,25 +73,22 @@
       <file leaf-file-name="database_adapter.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database_adapter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="554">
-              <caret line="62" column="19" lean-forward="true" selection-start-line="62" selection-start-column="19" selection-end-line="62" selection-end-column="19" />
+            <state relative-caret-position="526">
+              <caret line="61" column="21" lean-forward="true" selection-start-line="61" selection-start-column="21" selection-end-line="61" selection-end-column="21" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
-                <marker date="1490220443310" expanded="true" signature="473:502" ph="DROP TABLE I... " />
-                <marker date="1490220443310" expanded="true" signature="520:603" ph="CREATE TABLE... storage" />
-                <marker date="1490220443310" expanded="true" signature="636:665" ph="DROP TABLE I... " />
-                <marker date="1490220443310" expanded="true" signature="683:815" ph="CREATE TABLE... products" />
-                <marker date="1490220443310" expanded="true" signature="683:816" ph="CREATE TABLE... products" />
-                <marker date="1490220443310" expanded="true" signature="849:872" ph="DROP TABLE I... " />
-                <marker date="1490220443310" expanded="true" signature="890:1088" ph="CREATE TABLE... io" />
-                <marker date="1490220443310" expanded="true" signature="890:1153" ph="CREATE TABLE... io" />
-                <marker date="1490220443310" expanded="true" signature="890:1217" ph="CREATE TABLE... io" />
-                <marker date="1490220443310" expanded="true" signature="890:1837" ph="CREATE TABLE... io" />
-                <marker date="1490220443310" expanded="true" signature="1250:1276" ph="DROP TABLE I... " />
-                <marker date="1490220443310" expanded="true" signature="1294:1524" ph="CREATE TABLE... stock" />
-                <marker date="1490220443310" expanded="true" signature="1294:1588" ph="CREATE TABLE... stock" />
-                <marker date="1490220443310" expanded="true" signature="1294:1589" ph="CREATE TABLE... stock" />
-                <marker date="1490220443310" expanded="true" signature="1679:1704" ph="SELECT city storages" />
+                <marker date="1490230359591" expanded="true" signature="473:502" ph="DROP TABLE I... " />
+                <marker date="1490230359591" expanded="true" signature="520:603" ph="CREATE TABLE... storage" />
+                <marker date="1490230359591" expanded="true" signature="636:665" ph="DROP TABLE I... " />
+                <marker date="1490230359591" expanded="true" signature="683:815" ph="CREATE TABLE... products" />
+                <marker date="1490230359591" expanded="true" signature="683:816" ph="CREATE TABLE... products" />
+                <marker date="1490230359591" expanded="true" signature="849:872" ph="DROP TABLE I... " />
+                <marker date="1490230359591" expanded="true" signature="890:1088" ph="CREATE TABLE... io" />
+                <marker date="1490230359591" expanded="true" signature="890:1153" ph="CREATE TABLE... io" />
+                <marker date="1490230359591" expanded="true" signature="890:1217" ph="CREATE TABLE... io" />
+                <marker date="1490230359591" expanded="true" signature="1250:1276" ph="DROP TABLE I... " />
+                <marker date="1490230359591" expanded="true" signature="1294:1588" ph="CREATE TABLE... stock" />
+                <marker date="1490230359591" expanded="true" signature="1704:1729" ph="SELECT city storages" />
               </folding>
             </state>
           </provider>
@@ -116,11 +113,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/static/stylesheet.css" />
-        <option value="$PROJECT_DIR$/database_adapter.py" />
         <option value="$PROJECT_DIR$/Pear.py" />
-        <option value="$PROJECT_DIR$/static/client.js" />
+        <option value="$PROJECT_DIR$/static/stylesheet.css" />
         <option value="$PROJECT_DIR$/templates/client.html" />
+        <option value="$PROJECT_DIR$/database_adapter.py" />
+        <option value="$PROJECT_DIR$/static/client.js" />
       </list>
     </option>
   </component>
@@ -131,8 +128,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="906" />
-    <option name="width" value="1021" />
+    <option name="x" value="1017" />
+    <option name="width" value="910" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -213,7 +210,7 @@
       <recent name="C:\Users\skroo_000\Documents\Pear" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Pear (1)">
+  <component name="RunManager" selected="Python.Pear">
     <configuration default="false" name="Pear (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -490,8 +487,8 @@
     </list>
     <recent_temporary>
       <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Python.Pear (1)" />
-        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.client.html" />
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.client.html" />
+        <item index="1" class="java.lang.String" itemvalue="Python.Pear (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -509,23 +506,31 @@
       <option name="presentableId" value="Default" />
       <updated>1490191601651</updated>
     </task>
+    <task id="LOCAL-00001" summary="add relations to database and make storages data availabla through /print...server running old html for some reason though">
+      <created>1490223347687</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1490223347687</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="906" y="0" width="1021" height="1047" extended-state="0" />
-    <editor active="false" />
+    <frame x="1017" y="0" width="910" height="1047" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3485952" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38588235" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23304157" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23632385" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973986" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22647703" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -541,18 +546,18 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23304157" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34901533" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23413567" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35886213" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973986" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22751896" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -560,6 +565,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add relations to database and make storages data availabla through /print...server running old html for some reason though" />
+    <option name="LAST_COMMIT_MESSAGE" value="add relations to database and make storages data availabla through /print...server running old html for some reason though" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -608,21 +617,18 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
-            <marker date="1490220443310" expanded="true" signature="473:502" ph="DROP TABLE I... " />
-            <marker date="1490220443310" expanded="true" signature="520:603" ph="CREATE TABLE... storage" />
-            <marker date="1490220443310" expanded="true" signature="636:665" ph="DROP TABLE I... " />
-            <marker date="1490220443310" expanded="true" signature="683:815" ph="CREATE TABLE... products" />
-            <marker date="1490220443310" expanded="true" signature="683:816" ph="CREATE TABLE... products" />
-            <marker date="1490220443310" expanded="true" signature="849:872" ph="DROP TABLE I... " />
-            <marker date="1490220443310" expanded="true" signature="890:1088" ph="CREATE TABLE... io" />
-            <marker date="1490220443310" expanded="true" signature="890:1153" ph="CREATE TABLE... io" />
-            <marker date="1490220443310" expanded="true" signature="890:1217" ph="CREATE TABLE... io" />
-            <marker date="1490220443310" expanded="true" signature="890:1837" ph="CREATE TABLE... io" />
-            <marker date="1490220443310" expanded="true" signature="1250:1276" ph="DROP TABLE I... " />
-            <marker date="1490220443310" expanded="true" signature="1294:1524" ph="CREATE TABLE... stock" />
-            <marker date="1490220443310" expanded="true" signature="1294:1588" ph="CREATE TABLE... stock" />
-            <marker date="1490220443310" expanded="true" signature="1294:1589" ph="CREATE TABLE... stock" />
-            <marker date="1490220443310" expanded="true" signature="1679:1704" ph="SELECT city storages" />
+            <marker date="1490230359591" expanded="true" signature="473:502" ph="DROP TABLE I... " />
+            <marker date="1490230359591" expanded="true" signature="520:603" ph="CREATE TABLE... storage" />
+            <marker date="1490230359591" expanded="true" signature="636:665" ph="DROP TABLE I... " />
+            <marker date="1490230359591" expanded="true" signature="683:815" ph="CREATE TABLE... products" />
+            <marker date="1490230359591" expanded="true" signature="683:816" ph="CREATE TABLE... products" />
+            <marker date="1490230359591" expanded="true" signature="849:872" ph="DROP TABLE I... " />
+            <marker date="1490230359591" expanded="true" signature="890:1088" ph="CREATE TABLE... io" />
+            <marker date="1490230359591" expanded="true" signature="890:1153" ph="CREATE TABLE... io" />
+            <marker date="1490230359591" expanded="true" signature="890:1217" ph="CREATE TABLE... io" />
+            <marker date="1490230359591" expanded="true" signature="1250:1276" ph="DROP TABLE I... " />
+            <marker date="1490230359591" expanded="true" signature="1294:1588" ph="CREATE TABLE... stock" />
+            <marker date="1490230359591" expanded="true" signature="1704:1729" ph="SELECT city storages" />
           </folding>
         </state>
       </provider>
@@ -669,82 +675,76 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
-            <marker date="1490220443310" expanded="true" signature="473:502" ph="DROP TABLE I... " />
-            <marker date="1490220443310" expanded="true" signature="520:603" ph="CREATE TABLE... storage" />
-            <marker date="1490220443310" expanded="true" signature="636:665" ph="DROP TABLE I... " />
-            <marker date="1490220443310" expanded="true" signature="683:815" ph="CREATE TABLE... products" />
-            <marker date="1490220443310" expanded="true" signature="683:816" ph="CREATE TABLE... products" />
-            <marker date="1490220443310" expanded="true" signature="849:872" ph="DROP TABLE I... " />
-            <marker date="1490220443310" expanded="true" signature="890:1088" ph="CREATE TABLE... io" />
-            <marker date="1490220443310" expanded="true" signature="890:1153" ph="CREATE TABLE... io" />
-            <marker date="1490220443310" expanded="true" signature="890:1217" ph="CREATE TABLE... io" />
-            <marker date="1490220443310" expanded="true" signature="890:1837" ph="CREATE TABLE... io" />
-            <marker date="1490220443310" expanded="true" signature="1250:1276" ph="DROP TABLE I... " />
-            <marker date="1490220443310" expanded="true" signature="1294:1524" ph="CREATE TABLE... stock" />
-            <marker date="1490220443310" expanded="true" signature="1294:1588" ph="CREATE TABLE... stock" />
-            <marker date="1490220443310" expanded="true" signature="1294:1589" ph="CREATE TABLE... stock" />
-            <marker date="1490220443310" expanded="true" signature="1679:1704" ph="SELECT city storages" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database_adapter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="554">
-          <caret line="62" column="19" lean-forward="true" selection-start-line="62" selection-start-column="19" selection-end-line="62" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-            <marker date="1490220443310" expanded="true" signature="473:502" ph="DROP TABLE I... " />
-            <marker date="1490220443310" expanded="true" signature="520:603" ph="CREATE TABLE... storage" />
-            <marker date="1490220443310" expanded="true" signature="636:665" ph="DROP TABLE I... " />
-            <marker date="1490220443310" expanded="true" signature="683:815" ph="CREATE TABLE... products" />
-            <marker date="1490220443310" expanded="true" signature="683:816" ph="CREATE TABLE... products" />
-            <marker date="1490220443310" expanded="true" signature="849:872" ph="DROP TABLE I... " />
-            <marker date="1490220443310" expanded="true" signature="890:1088" ph="CREATE TABLE... io" />
-            <marker date="1490220443310" expanded="true" signature="890:1153" ph="CREATE TABLE... io" />
-            <marker date="1490220443310" expanded="true" signature="890:1217" ph="CREATE TABLE... io" />
-            <marker date="1490220443310" expanded="true" signature="890:1837" ph="CREATE TABLE... io" />
-            <marker date="1490220443310" expanded="true" signature="1250:1276" ph="DROP TABLE I... " />
-            <marker date="1490220443310" expanded="true" signature="1294:1524" ph="CREATE TABLE... stock" />
-            <marker date="1490220443310" expanded="true" signature="1294:1588" ph="CREATE TABLE... stock" />
-            <marker date="1490220443310" expanded="true" signature="1294:1589" ph="CREATE TABLE... stock" />
-            <marker date="1490220443310" expanded="true" signature="1679:1704" ph="SELECT city storages" />
+            <marker date="1490230359591" expanded="true" signature="473:502" ph="DROP TABLE I... " />
+            <marker date="1490230359591" expanded="true" signature="520:603" ph="CREATE TABLE... storage" />
+            <marker date="1490230359591" expanded="true" signature="636:665" ph="DROP TABLE I... " />
+            <marker date="1490230359591" expanded="true" signature="683:815" ph="CREATE TABLE... products" />
+            <marker date="1490230359591" expanded="true" signature="683:816" ph="CREATE TABLE... products" />
+            <marker date="1490230359591" expanded="true" signature="849:872" ph="DROP TABLE I... " />
+            <marker date="1490230359591" expanded="true" signature="890:1088" ph="CREATE TABLE... io" />
+            <marker date="1490230359591" expanded="true" signature="890:1153" ph="CREATE TABLE... io" />
+            <marker date="1490230359591" expanded="true" signature="890:1217" ph="CREATE TABLE... io" />
+            <marker date="1490230359591" expanded="true" signature="1250:1276" ph="DROP TABLE I... " />
+            <marker date="1490230359591" expanded="true" signature="1294:1588" ph="CREATE TABLE... stock" />
+            <marker date="1490230359591" expanded="true" signature="1704:1729" ph="SELECT city storages" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/stylesheet.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="272">
+          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/client.js">
+    <entry file="file://$PROJECT_DIR$/database_adapter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="23" column="33" lean-forward="true" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
+        <state relative-caret-position="526">
+          <caret line="61" column="21" lean-forward="true" selection-start-line="61" selection-start-column="21" selection-end-line="61" selection-end-column="21" />
           <folding>
-            <element signature="n#!!doc;n#getStorages#0" expanded="false" />
+            <element signature="e#0#14#0" expanded="true" />
+            <marker date="1490230359591" expanded="true" signature="473:502" ph="DROP TABLE I... " />
+            <marker date="1490230359591" expanded="true" signature="520:603" ph="CREATE TABLE... storage" />
+            <marker date="1490230359591" expanded="true" signature="636:665" ph="DROP TABLE I... " />
+            <marker date="1490230359591" expanded="true" signature="683:815" ph="CREATE TABLE... products" />
+            <marker date="1490230359591" expanded="true" signature="683:816" ph="CREATE TABLE... products" />
+            <marker date="1490230359591" expanded="true" signature="849:872" ph="DROP TABLE I... " />
+            <marker date="1490230359591" expanded="true" signature="890:1088" ph="CREATE TABLE... io" />
+            <marker date="1490230359591" expanded="true" signature="890:1153" ph="CREATE TABLE... io" />
+            <marker date="1490230359591" expanded="true" signature="890:1217" ph="CREATE TABLE... io" />
+            <marker date="1490230359591" expanded="true" signature="1250:1276" ph="DROP TABLE I... " />
+            <marker date="1490230359591" expanded="true" signature="1294:1588" ph="CREATE TABLE... stock" />
+            <marker date="1490230359591" expanded="true" signature="1704:1729" ph="SELECT city storages" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pear.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="32" column="77" lean-forward="true" selection-start-line="32" selection-start-column="77" selection-end-line="32" selection-end-column="77" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/client.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+        <state relative-caret-position="221">
+          <caret line="13" column="34" lean-forward="true" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Pear.py">
+    <entry file="file://$PROJECT_DIR$/static/client.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="21" lean-forward="true" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+        <state relative-caret-position="289">
+          <caret line="19" column="9" lean-forward="true" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
           <folding>
-            <element signature="e#0#23#0" expanded="true" />
+            <element signature="n#!!doc;n#getStorages#0" expanded="false" />
           </folding>
         </state>
       </provider>

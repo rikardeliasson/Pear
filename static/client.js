@@ -14,11 +14,12 @@ function getStorages() {
                 for (var i = 0; i < userdata.length; i++) {
                     result += userdata[i];
                 }
-                document.getElementById("storages").innerHTML = result;
+                document.getElementById('storages').innerHTML = result;
+                //document.getElementById("storages").innerHTML = '<p type="text">' + json.data + "</p>";
             }
         }
     };
-    sendGETrequest(xmlhttp, "/get_storages/");
+    sendGETrequest(xmlhttp, "/print");
 }
 
 function sendGETrequest(xmlhttp, route){
