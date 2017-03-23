@@ -27,6 +27,24 @@ def print_storages():
         return create_response(False, "Failed to retrieve storages")
 
 
+@app.route("/get_storage_by_id/<storage_id>")
+def get_storage_by_id(storage_id):
+    data = db.get_storage_by_id(storage_id)
+    if data is not None:
+        return create_response_data(True, "Storage_retrieved", data)
+    else:
+        return create_response(False, "No such storage")
+
+
+@app.route("/get_product_by_id/<product_id>")
+def get_product_by_id(product_id) :
+    data = db.get_product_by_id(product_id)
+    if data is not None:
+        return create_response_data(True, "Product_retrieved", data)
+    else:
+        return create_response(False, "No such product")
+
+
 # creates a JSON response with additional data
 def create_response_data(success, message, data):
     print message

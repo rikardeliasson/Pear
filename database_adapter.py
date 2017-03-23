@@ -1,5 +1,4 @@
 import sqlite3
-import string
 
 from flask import g
 
@@ -35,16 +34,16 @@ def init():
     c.execute("DROP TABLE IF EXISTS io")
     c.execute("CREATE TABLE io (id INTEGER PRIMARY KEY, "
               "date DATE NOT NULL, "
-              "product TEXT NOT NULL, "
-              "storage TEXT NOT NULL, "
+              "product INTEGER NOT NULL, "
+              "storage INTEGER NOT NULL, "
               "amount INTEGER NOT NULL, "
               "FOREIGN KEY (product) REFERENCES products(id), "
               "FOREIGN KEY (storage) REFERENCES storages(id))"
               )
     c.execute("DROP TABLE IF EXISTS stock")
     c.execute("CREATE TABLE stock (id INTEGER PRIMARY KEY, "
-              "product TEXT NOT NULL, "
-              "storage TEXT NOT NULL, "
+              "product INTEGER NOT NULL, "
+              "storage INTEGER NOT NULL, "
               "balance INTEGER NOT NULL, "
               "FOREIGN KEY (product) REFERENCES products(id), "
               "FOREIGN KEY (storage) REFERENCES storages(id))"
@@ -62,3 +61,19 @@ def get_storages():
         data = row[0]
         storages.append(data)
     return storages
+
+
+def get_storage_by_id(storage_id):
+    # type: (int) -> str
+    c = get_db()
+
+    u = c.execute("SELECT city FROM storages WHERE id = ?", (storage_id,))
+    return ''.join(u.fetchone())
+
+
+def get_product_by_id(product_id):
+    # type: (int) -> str
+    c = get_db()
+
+    u = c.execute("SELECT name FROM products WHERE id = ?", (product_id,))
+    return ''.join(u.fetchone())
