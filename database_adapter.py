@@ -52,7 +52,6 @@ def init():
     c.commit()
 
 
-# At this time only for testing
 # returns all storage city names
 def get_storages():
     # type: () -> object

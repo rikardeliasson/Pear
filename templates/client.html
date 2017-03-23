@@ -7,8 +7,13 @@
     <title>Title</title>
 </head>
 <body>
-    <div id="storages"></div>
+    <!--Dropdown menu for selection of storage-->
+    <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Välj Lager</button>
+        <!--the script injects the storages into the list-->
+        <div id="myDropdown" class="dropdown-content"></div>
+        <script>getStorages()</script>
+    </div>
 
 </body>
-    <script>getStorages()</script>
 </html>

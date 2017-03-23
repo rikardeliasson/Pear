@@ -3,9 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="5f7dc04b-1555-4026-bc2a-e0c4402cb9f6" name="Default" comment="add relations to database and make storages data availabla through /print...server running old html for some reason though">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pear.py" afterPath="$PROJECT_DIR$/Pear.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database_adapter.py" afterPath="$PROJECT_DIR$/database_adapter.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/client.js" afterPath="$PROJECT_DIR$/static/client.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/stylesheet.css" afterPath="$PROJECT_DIR$/static/stylesheet.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/client.html" afterPath="$PROJECT_DIR$/templates/client.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,7 +17,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Pear$Pear__1_.coverage" NAME="Pear (1) Coverage Results" MODIFIED="1490224717228" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Pear$Pear.coverage" NAME="Pear Coverage Results" MODIFIED="1490286794818" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/Pear$Pear.coverage" NAME="Pear Coverage Results" MODIFIED="1490298186242" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -24,64 +25,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Pear.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Pear.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="59" column="53" lean-forward="true" selection-start-line="59" selection-start-column="14" selection-end-line="59" selection-end-column="53" />
-              <folding>
-                <element signature="e#0#23#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="client.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/client.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="7" lean-forward="true" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="database_adapter.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/database_adapter.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="91" column="38" lean-forward="false" selection-start-line="91" selection-start-column="38" selection-end-line="91" selection-end-column="38" />
-              <folding>
-                <element signature="e#0#14#0" expanded="true" />
-                <marker date="1490286794685" expanded="true" signature="461:490" ph="DROP TABLE I... " />
-                <marker date="1490286794685" expanded="true" signature="508:591" ph="CREATE TABLE... storage" />
-                <marker date="1490286794685" expanded="true" signature="624:653" ph="DROP TABLE I... " />
-                <marker date="1490286794685" expanded="true" signature="671:803" ph="CREATE TABLE... products" />
-                <marker date="1490286794685" expanded="true" signature="671:804" ph="CREATE TABLE... products" />
-                <marker date="1490286794685" expanded="true" signature="837:860" ph="DROP TABLE I... " />
-                <marker date="1490286794685" expanded="true" signature="878:1082" ph="CREATE TABLE... io" />
-                <marker date="1490286794685" expanded="true" signature="878:1147" ph="CREATE TABLE... io" />
-                <marker date="1490286794685" expanded="true" signature="878:1211" ph="CREATE TABLE... io" />
-                <marker date="1490286794685" expanded="true" signature="1244:1270" ph="DROP TABLE I... " />
-                <marker date="1490286794685" expanded="true" signature="1288:1588" ph="CREATE TABLE... stock" />
-                <marker date="1490286794685" expanded="true" signature="1769:1794" ph="SELECT city storages" />
-                <marker date="1490286794685" expanded="true" signature="2085:2123" ph="SELECT city storages" />
-                <marker date="1490286794685" expanded="true" signature="2322:2360" ph="SELECT name products" />
-                <marker date="1490286794685" expanded="true" signature="2571:2608" ph="SELECT * FRO... stocks" />
-                <marker date="1490286794685" expanded="true" signature="2797:2837" ph="SELECT name products" />
-                <marker date="1490286794685" expanded="true" signature="3017:3057" ph="SELECT city storages" />
-                <marker date="1490286794685" expanded="true" signature="3751:3815" ph="INSERT INTO io... " />
-                <marker date="1490286794685" expanded="true" signature="4183:4243" ph="INSERT INTO stock... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="stylesheet.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/stylesheet.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state relative-caret-position="617">
+              <caret line="51" column="22" lean-forward="false" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -90,11 +38,21 @@
       <file leaf-file-name="client.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/client.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="16" column="38" lean-forward="true" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+            <state relative-caret-position="-29">
+              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding>
                 <element signature="n#!!doc;n#getStorages#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="client.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/client.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -123,11 +81,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/Pear.py" />
+        <option value="$PROJECT_DIR$/database_adapter.py" />
         <option value="$PROJECT_DIR$/static/stylesheet.css" />
         <option value="$PROJECT_DIR$/static/client.js" />
         <option value="$PROJECT_DIR$/templates/client.html" />
-        <option value="$PROJECT_DIR$/Pear.py" />
-        <option value="$PROJECT_DIR$/database_adapter.py" />
       </list>
     </option>
   </component>
@@ -202,8 +160,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -508,6 +466,9 @@
   <component name="StructureViewFactory">
     <option name="ACTIVE_ACTIONS" value=",SHOW_INHERITED,ALPHA_COMPARATOR" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="5f7dc04b-1555-4026-bc2a-e0c4402cb9f6" name="Default" comment="" />
@@ -538,14 +499,13 @@
     <frame x="953" y="0" width="974" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21006565" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21444201" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6695558" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23632385" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23851204" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24946696" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -555,6 +515,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -593,6 +554,71 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Pear.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="935">
+          <caret line="59" column="53" lean-forward="false" selection-start-line="59" selection-start-column="14" selection-end-line="59" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/client.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="7" lean-forward="true" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database_adapter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+            <marker date="1490296350380" expanded="true" signature="461:490" ph="DROP TABLE I... " />
+            <marker date="1490296350380" expanded="true" signature="508:591" ph="CREATE TABLE... storage" />
+            <marker date="1490296350380" expanded="true" signature="624:653" ph="DROP TABLE I... " />
+            <marker date="1490296350380" expanded="true" signature="671:803" ph="CREATE TABLE... products" />
+            <marker date="1490296350380" expanded="true" signature="671:804" ph="CREATE TABLE... products" />
+            <marker date="1490296350380" expanded="true" signature="837:860" ph="DROP TABLE I... " />
+            <marker date="1490296350380" expanded="true" signature="878:1082" ph="CREATE TABLE... io" />
+            <marker date="1490296350380" expanded="true" signature="878:1147" ph="CREATE TABLE... io" />
+            <marker date="1490296350380" expanded="true" signature="878:1211" ph="CREATE TABLE... io" />
+            <marker date="1490296350380" expanded="true" signature="1244:1270" ph="DROP TABLE I... " />
+            <marker date="1490296350380" expanded="true" signature="1288:1588" ph="CREATE TABLE... stock" />
+            <marker date="1490296350380" expanded="true" signature="1737:1762" ph="SELECT city storages" />
+            <marker date="1490296350380" expanded="true" signature="2053:2091" ph="SELECT city storages" />
+            <marker date="1490296350380" expanded="true" signature="2290:2328" ph="SELECT name products" />
+            <marker date="1490296350380" expanded="true" signature="2539:2576" ph="SELECT * FRO... stocks" />
+            <marker date="1490296350380" expanded="true" signature="2765:2805" ph="SELECT name products" />
+            <marker date="1490296350380" expanded="true" signature="2985:3025" ph="SELECT city storages" />
+            <marker date="1490296350380" expanded="true" signature="3719:3783" ph="INSERT INTO io... " />
+            <marker date="1490296350380" expanded="true" signature="4151:4211" ph="INSERT INTO stock... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/stylesheet.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/client.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="38" lean-forward="true" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+          <folding>
+            <element signature="n#!!doc;n#getStorages#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Pear.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
@@ -635,25 +661,25 @@
           <caret line="61" column="21" lean-forward="true" selection-start-line="61" selection-start-column="21" selection-end-line="61" selection-end-column="21" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
-            <marker date="1490286794685" expanded="true" signature="461:490" ph="DROP TABLE I... " />
-            <marker date="1490286794685" expanded="true" signature="508:591" ph="CREATE TABLE... storage" />
-            <marker date="1490286794685" expanded="true" signature="624:653" ph="DROP TABLE I... " />
-            <marker date="1490286794685" expanded="true" signature="671:803" ph="CREATE TABLE... products" />
-            <marker date="1490286794685" expanded="true" signature="671:804" ph="CREATE TABLE... products" />
-            <marker date="1490286794685" expanded="true" signature="837:860" ph="DROP TABLE I... " />
-            <marker date="1490286794685" expanded="true" signature="878:1082" ph="CREATE TABLE... io" />
-            <marker date="1490286794685" expanded="true" signature="878:1147" ph="CREATE TABLE... io" />
-            <marker date="1490286794685" expanded="true" signature="878:1211" ph="CREATE TABLE... io" />
-            <marker date="1490286794685" expanded="true" signature="1244:1270" ph="DROP TABLE I... " />
-            <marker date="1490286794685" expanded="true" signature="1288:1588" ph="CREATE TABLE... stock" />
-            <marker date="1490286794685" expanded="true" signature="1769:1794" ph="SELECT city storages" />
-            <marker date="1490286794685" expanded="true" signature="2085:2123" ph="SELECT city storages" />
-            <marker date="1490286794685" expanded="true" signature="2322:2360" ph="SELECT name products" />
-            <marker date="1490286794685" expanded="true" signature="2571:2608" ph="SELECT * FRO... stocks" />
-            <marker date="1490286794685" expanded="true" signature="2797:2837" ph="SELECT name products" />
-            <marker date="1490286794685" expanded="true" signature="3017:3057" ph="SELECT city storages" />
-            <marker date="1490286794685" expanded="true" signature="3751:3815" ph="INSERT INTO io... " />
-            <marker date="1490286794685" expanded="true" signature="4183:4243" ph="INSERT INTO stock... " />
+            <marker date="1490296350380" expanded="true" signature="461:490" ph="DROP TABLE I... " />
+            <marker date="1490296350380" expanded="true" signature="508:591" ph="CREATE TABLE... storage" />
+            <marker date="1490296350380" expanded="true" signature="624:653" ph="DROP TABLE I... " />
+            <marker date="1490296350380" expanded="true" signature="671:803" ph="CREATE TABLE... products" />
+            <marker date="1490296350380" expanded="true" signature="671:804" ph="CREATE TABLE... products" />
+            <marker date="1490296350380" expanded="true" signature="837:860" ph="DROP TABLE I... " />
+            <marker date="1490296350380" expanded="true" signature="878:1082" ph="CREATE TABLE... io" />
+            <marker date="1490296350380" expanded="true" signature="878:1147" ph="CREATE TABLE... io" />
+            <marker date="1490296350380" expanded="true" signature="878:1211" ph="CREATE TABLE... io" />
+            <marker date="1490296350380" expanded="true" signature="1244:1270" ph="DROP TABLE I... " />
+            <marker date="1490296350380" expanded="true" signature="1288:1588" ph="CREATE TABLE... stock" />
+            <marker date="1490296350380" expanded="true" signature="1737:1762" ph="SELECT city storages" />
+            <marker date="1490296350380" expanded="true" signature="2053:2091" ph="SELECT city storages" />
+            <marker date="1490296350380" expanded="true" signature="2290:2328" ph="SELECT name products" />
+            <marker date="1490296350380" expanded="true" signature="2539:2576" ph="SELECT * FRO... stocks" />
+            <marker date="1490296350380" expanded="true" signature="2765:2805" ph="SELECT name products" />
+            <marker date="1490296350380" expanded="true" signature="2985:3025" ph="SELECT city storages" />
+            <marker date="1490296350380" expanded="true" signature="3719:3783" ph="INSERT INTO io... " />
+            <marker date="1490296350380" expanded="true" signature="4151:4211" ph="INSERT INTO stock... " />
           </folding>
         </state>
       </provider>
@@ -700,25 +726,25 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
-            <marker date="1490286794685" expanded="true" signature="461:490" ph="DROP TABLE I... " />
-            <marker date="1490286794685" expanded="true" signature="508:591" ph="CREATE TABLE... storage" />
-            <marker date="1490286794685" expanded="true" signature="624:653" ph="DROP TABLE I... " />
-            <marker date="1490286794685" expanded="true" signature="671:803" ph="CREATE TABLE... products" />
-            <marker date="1490286794685" expanded="true" signature="671:804" ph="CREATE TABLE... products" />
-            <marker date="1490286794685" expanded="true" signature="837:860" ph="DROP TABLE I... " />
-            <marker date="1490286794685" expanded="true" signature="878:1082" ph="CREATE TABLE... io" />
-            <marker date="1490286794685" expanded="true" signature="878:1147" ph="CREATE TABLE... io" />
-            <marker date="1490286794685" expanded="true" signature="878:1211" ph="CREATE TABLE... io" />
-            <marker date="1490286794685" expanded="true" signature="1244:1270" ph="DROP TABLE I... " />
-            <marker date="1490286794685" expanded="true" signature="1288:1588" ph="CREATE TABLE... stock" />
-            <marker date="1490286794685" expanded="true" signature="1769:1794" ph="SELECT city storages" />
-            <marker date="1490286794685" expanded="true" signature="2085:2123" ph="SELECT city storages" />
-            <marker date="1490286794685" expanded="true" signature="2322:2360" ph="SELECT name products" />
-            <marker date="1490286794685" expanded="true" signature="2571:2608" ph="SELECT * FRO... stocks" />
-            <marker date="1490286794685" expanded="true" signature="2797:2837" ph="SELECT name products" />
-            <marker date="1490286794685" expanded="true" signature="3017:3057" ph="SELECT city storages" />
-            <marker date="1490286794685" expanded="true" signature="3751:3815" ph="INSERT INTO io... " />
-            <marker date="1490286794685" expanded="true" signature="4183:4243" ph="INSERT INTO stock... " />
+            <marker date="1490296350380" expanded="true" signature="461:490" ph="DROP TABLE I... " />
+            <marker date="1490296350380" expanded="true" signature="508:591" ph="CREATE TABLE... storage" />
+            <marker date="1490296350380" expanded="true" signature="624:653" ph="DROP TABLE I... " />
+            <marker date="1490296350380" expanded="true" signature="671:803" ph="CREATE TABLE... products" />
+            <marker date="1490296350380" expanded="true" signature="671:804" ph="CREATE TABLE... products" />
+            <marker date="1490296350380" expanded="true" signature="837:860" ph="DROP TABLE I... " />
+            <marker date="1490296350380" expanded="true" signature="878:1082" ph="CREATE TABLE... io" />
+            <marker date="1490296350380" expanded="true" signature="878:1147" ph="CREATE TABLE... io" />
+            <marker date="1490296350380" expanded="true" signature="878:1211" ph="CREATE TABLE... io" />
+            <marker date="1490296350380" expanded="true" signature="1244:1270" ph="DROP TABLE I... " />
+            <marker date="1490296350380" expanded="true" signature="1288:1588" ph="CREATE TABLE... stock" />
+            <marker date="1490296350380" expanded="true" signature="1737:1762" ph="SELECT city storages" />
+            <marker date="1490296350380" expanded="true" signature="2053:2091" ph="SELECT city storages" />
+            <marker date="1490296350380" expanded="true" signature="2290:2328" ph="SELECT name products" />
+            <marker date="1490296350380" expanded="true" signature="2539:2576" ph="SELECT * FRO... stocks" />
+            <marker date="1490296350380" expanded="true" signature="2765:2805" ph="SELECT name products" />
+            <marker date="1490296350380" expanded="true" signature="2985:3025" ph="SELECT city storages" />
+            <marker date="1490296350380" expanded="true" signature="3719:3783" ph="INSERT INTO io... " />
+            <marker date="1490296350380" expanded="true" signature="4151:4211" ph="INSERT INTO stock... " />
           </folding>
         </state>
       </provider>
@@ -765,91 +791,91 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
-            <marker date="1490286794685" expanded="true" signature="461:490" ph="DROP TABLE I... " />
-            <marker date="1490286794685" expanded="true" signature="508:591" ph="CREATE TABLE... storage" />
-            <marker date="1490286794685" expanded="true" signature="624:653" ph="DROP TABLE I... " />
-            <marker date="1490286794685" expanded="true" signature="671:803" ph="CREATE TABLE... products" />
-            <marker date="1490286794685" expanded="true" signature="671:804" ph="CREATE TABLE... products" />
-            <marker date="1490286794685" expanded="true" signature="837:860" ph="DROP TABLE I... " />
-            <marker date="1490286794685" expanded="true" signature="878:1082" ph="CREATE TABLE... io" />
-            <marker date="1490286794685" expanded="true" signature="878:1147" ph="CREATE TABLE... io" />
-            <marker date="1490286794685" expanded="true" signature="878:1211" ph="CREATE TABLE... io" />
-            <marker date="1490286794685" expanded="true" signature="1244:1270" ph="DROP TABLE I... " />
-            <marker date="1490286794685" expanded="true" signature="1288:1588" ph="CREATE TABLE... stock" />
-            <marker date="1490286794685" expanded="true" signature="1769:1794" ph="SELECT city storages" />
-            <marker date="1490286794685" expanded="true" signature="2085:2123" ph="SELECT city storages" />
-            <marker date="1490286794685" expanded="true" signature="2322:2360" ph="SELECT name products" />
-            <marker date="1490286794685" expanded="true" signature="2571:2608" ph="SELECT * FRO... stocks" />
-            <marker date="1490286794685" expanded="true" signature="2797:2837" ph="SELECT name products" />
-            <marker date="1490286794685" expanded="true" signature="3017:3057" ph="SELECT city storages" />
-            <marker date="1490286794685" expanded="true" signature="3751:3815" ph="INSERT INTO io... " />
-            <marker date="1490286794685" expanded="true" signature="4183:4243" ph="INSERT INTO stock... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/stylesheet.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/client.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="7" lean-forward="true" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/client.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="16" column="38" lean-forward="true" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
-          <folding>
-            <element signature="n#!!doc;n#getStorages#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pear.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="59" column="53" lean-forward="true" selection-start-line="59" selection-start-column="14" selection-end-line="59" selection-end-column="53" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
+            <marker date="1490296350380" expanded="true" signature="461:490" ph="DROP TABLE I... " />
+            <marker date="1490296350380" expanded="true" signature="508:591" ph="CREATE TABLE... storage" />
+            <marker date="1490296350380" expanded="true" signature="624:653" ph="DROP TABLE I... " />
+            <marker date="1490296350380" expanded="true" signature="671:803" ph="CREATE TABLE... products" />
+            <marker date="1490296350380" expanded="true" signature="671:804" ph="CREATE TABLE... products" />
+            <marker date="1490296350380" expanded="true" signature="837:860" ph="DROP TABLE I... " />
+            <marker date="1490296350380" expanded="true" signature="878:1082" ph="CREATE TABLE... io" />
+            <marker date="1490296350380" expanded="true" signature="878:1147" ph="CREATE TABLE... io" />
+            <marker date="1490296350380" expanded="true" signature="878:1211" ph="CREATE TABLE... io" />
+            <marker date="1490296350380" expanded="true" signature="1244:1270" ph="DROP TABLE I... " />
+            <marker date="1490296350380" expanded="true" signature="1288:1588" ph="CREATE TABLE... stock" />
+            <marker date="1490296350380" expanded="true" signature="1737:1762" ph="SELECT city storages" />
+            <marker date="1490296350380" expanded="true" signature="2053:2091" ph="SELECT city storages" />
+            <marker date="1490296350380" expanded="true" signature="2290:2328" ph="SELECT name products" />
+            <marker date="1490296350380" expanded="true" signature="2539:2576" ph="SELECT * FRO... stocks" />
+            <marker date="1490296350380" expanded="true" signature="2765:2805" ph="SELECT name products" />
+            <marker date="1490296350380" expanded="true" signature="2985:3025" ph="SELECT city storages" />
+            <marker date="1490296350380" expanded="true" signature="3719:3783" ph="INSERT INTO io... " />
+            <marker date="1490296350380" expanded="true" signature="4151:4211" ph="INSERT INTO stock... " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/database_adapter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="91" column="38" lean-forward="false" selection-start-line="91" selection-start-column="38" selection-end-line="91" selection-end-column="38" />
+        <state relative-caret-position="748">
+          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
-            <marker date="1490286794685" expanded="true" signature="461:490" ph="DROP TABLE I... " />
-            <marker date="1490286794685" expanded="true" signature="508:591" ph="CREATE TABLE... storage" />
-            <marker date="1490286794685" expanded="true" signature="624:653" ph="DROP TABLE I... " />
-            <marker date="1490286794685" expanded="true" signature="671:803" ph="CREATE TABLE... products" />
-            <marker date="1490286794685" expanded="true" signature="671:804" ph="CREATE TABLE... products" />
-            <marker date="1490286794685" expanded="true" signature="837:860" ph="DROP TABLE I... " />
-            <marker date="1490286794685" expanded="true" signature="878:1082" ph="CREATE TABLE... io" />
-            <marker date="1490286794685" expanded="true" signature="878:1147" ph="CREATE TABLE... io" />
-            <marker date="1490286794685" expanded="true" signature="878:1211" ph="CREATE TABLE... io" />
-            <marker date="1490286794685" expanded="true" signature="1244:1270" ph="DROP TABLE I... " />
-            <marker date="1490286794685" expanded="true" signature="1288:1588" ph="CREATE TABLE... stock" />
-            <marker date="1490286794685" expanded="true" signature="1769:1794" ph="SELECT city storages" />
-            <marker date="1490286794685" expanded="true" signature="2085:2123" ph="SELECT city storages" />
-            <marker date="1490286794685" expanded="true" signature="2322:2360" ph="SELECT name products" />
-            <marker date="1490286794685" expanded="true" signature="2571:2608" ph="SELECT * FRO... stocks" />
-            <marker date="1490286794685" expanded="true" signature="2797:2837" ph="SELECT name products" />
-            <marker date="1490286794685" expanded="true" signature="3017:3057" ph="SELECT city storages" />
-            <marker date="1490286794685" expanded="true" signature="3751:3815" ph="INSERT INTO io... " />
-            <marker date="1490286794685" expanded="true" signature="4183:4243" ph="INSERT INTO stock... " />
+            <marker date="1490296350380" expanded="true" signature="461:490" ph="DROP TABLE I... " />
+            <marker date="1490296350380" expanded="true" signature="508:591" ph="CREATE TABLE... storage" />
+            <marker date="1490296350380" expanded="true" signature="624:653" ph="DROP TABLE I... " />
+            <marker date="1490296350380" expanded="true" signature="671:803" ph="CREATE TABLE... products" />
+            <marker date="1490296350380" expanded="true" signature="671:804" ph="CREATE TABLE... products" />
+            <marker date="1490296350380" expanded="true" signature="837:860" ph="DROP TABLE I... " />
+            <marker date="1490296350380" expanded="true" signature="878:1082" ph="CREATE TABLE... io" />
+            <marker date="1490296350380" expanded="true" signature="878:1147" ph="CREATE TABLE... io" />
+            <marker date="1490296350380" expanded="true" signature="878:1211" ph="CREATE TABLE... io" />
+            <marker date="1490296350380" expanded="true" signature="1244:1270" ph="DROP TABLE I... " />
+            <marker date="1490296350380" expanded="true" signature="1288:1588" ph="CREATE TABLE... stock" />
+            <marker date="1490296350380" expanded="true" signature="1737:1762" ph="SELECT city storages" />
+            <marker date="1490296350380" expanded="true" signature="2053:2091" ph="SELECT city storages" />
+            <marker date="1490296350380" expanded="true" signature="2290:2328" ph="SELECT name products" />
+            <marker date="1490296350380" expanded="true" signature="2539:2576" ph="SELECT * FRO... stocks" />
+            <marker date="1490296350380" expanded="true" signature="2765:2805" ph="SELECT name products" />
+            <marker date="1490296350380" expanded="true" signature="2985:3025" ph="SELECT city storages" />
+            <marker date="1490296350380" expanded="true" signature="3719:3783" ph="INSERT INTO io... " />
+            <marker date="1490296350380" expanded="true" signature="4151:4211" ph="INSERT INTO stock... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pear.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-37">
+          <caret line="61" column="66" lean-forward="true" selection-start-line="61" selection-start-column="66" selection-end-line="61" selection-end-column="66" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/stylesheet.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="617">
+          <caret line="51" column="22" lean-forward="false" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/client.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-29">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc;n#getStorages#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/client.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
