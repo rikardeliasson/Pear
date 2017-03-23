@@ -9,12 +9,8 @@ function getStorages() {
         if (this.readyState == 4 && this.status == 200) {
             var json = JSON.parse(this.responseText);
             if (json.success) {
-                var userdata = json.data;
-                var result = '';
-                for (var i = 0; i < userdata.length; i++) {
-                    result += userdata[i];
-                }
-                document.getElementById('storages').innerHTML = result;
+
+                document.getElementById('storages').innerHTML = json.data;
                 //document.getElementById("storages").innerHTML = '<p type="text">' + json.data + "</p>";
             }
         }
@@ -28,23 +24,3 @@ function sendGETrequest(xmlhttp, route){
     xmlhttp.send();
 }
 
-/* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
-function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-}
-
-// Close the dropdown menu if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
