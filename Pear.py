@@ -37,12 +37,20 @@ def get_storage_by_id(storage_id):
 
 
 @app.route("/get_product_by_id/<product_id>")
-def get_product_by_id(product_id) :
+def get_product_by_id(product_id):
     data = db.get_product_by_id(product_id)
     if data is not None:
         return create_response_data(True, "Product_retrieved", data)
     else:
         return create_response(False, "No such product")
+
+
+@app.route("/add_io/<ship_date>/<product_name>/<storage_name>/<ship_amount>")
+def add_io(ship_date, product_name, storage_name, ship_amount):
+    if db.add_io(ship_date, product_name, storage_name, ship_amount):
+        return create_response(True, "io created")
+    else:
+        return create_response(False, "Failed to create io")
 
 
 # creates a JSON response with additional data

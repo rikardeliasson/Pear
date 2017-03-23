@@ -80,12 +80,30 @@ def get_product_by_id(product_id):
     return ''.join(u.fetchone())
 
 
-# TODO: add help functions product_exists(product_name) amd storage_exists(storage_name)
-def add_io(ship_date, product_id, storage_id, ship_amount):
-    #type: (Date, int, int, int) -> bool
+# check if product exists
+def product_exists(product_name):
+    # type: (str) -> bool
     c = get_db()
 
-    c.execute("INSERT INTO io (date, product, storage, amount) VALUES (?,?,?,?)",
-              (ship_date, product_id, storage_id, ship_amount))
-    c.commit()
-    return True
+    u = c.execute("SELECT name FROM products WHERE name = ?", (product_name,))
+    return u.fetchone() is not None
+
+
+# check if storage exists
+def storage_exists(storage_name):
+    # type: (str) -> bool
+    c = get_db();
+    u = c.execute("SELECT city FROM storages WHERE city = ?", (storage_name,))
+    return u.fetchone() is not None
+
+
+def add_io(ship_date, product_name, storage_name, ship_amount):
+    # type: (Date, string, string, int) -> bool
+    c = get_db()
+    if product_exists(product_name) and storage_exists(storage_name):
+        c.execute("INSERT INTO io (date, product, storage, amount) VALUES (?,?,?,?)",
+                  (ship_date, product_name, storage_name, ship_amount))
+        c.commit()
+        return True
+    else:
+        return False
