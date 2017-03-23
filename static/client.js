@@ -4,9 +4,12 @@
 
 function populate_stock_table(storage_name) {
     window.alert(storage_name);
+    var data = get_stock_by_storage_name(storage_name);
+
 }
 
-function getStorages() {
+//retrieves the storage names and injects them in drop-down menu
+function get_storages() {
     var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance
     xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
@@ -26,6 +29,20 @@ function getStorages() {
     };
     sendGETrequest(xmlhttp, "/get_storages");
 }
+
+function get_stock_by_storage_name(storage_name) {
+    var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            var json = JSON.parse(this.responseText);
+            if (json.success) {
+                return json.data;
+            }
+        }
+    };
+    sendGETrequest(xmlhttp, "/get_stock_by_storage_name/" + storage_name);
+}
+
 
 function sendGETrequest(xmlhttp, route){
     xmlhttp.open("GET", route, true);

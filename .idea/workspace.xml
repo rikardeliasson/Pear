@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f7dc04b-1555-4026-bc2a-e0c4402cb9f6" name="Default" comment="add relations to database and make storages data availabla through /print...server running old html for some reason though">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pear.py" afterPath="$PROJECT_DIR$/Pear.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/client.js" afterPath="$PROJECT_DIR$/static/client.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/client.html" afterPath="$PROJECT_DIR$/templates/client.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,7 +14,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Pear$Pear__1_.coverage" NAME="Pear (1) Coverage Results" MODIFIED="1490224717228" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Pear$Pear.coverage" NAME="Pear Coverage Results" MODIFIED="1490306434853" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/Pear$Pear.coverage" NAME="Pear Coverage Results" MODIFIED="1490307322264" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -23,10 +22,10 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Pear.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Pear.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Pear.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="77">
+            <state relative-caret-position="442">
               <caret line="26" column="27" lean-forward="true" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
@@ -48,8 +47,8 @@
       <file leaf-file-name="database_adapter.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database_adapter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="26" column="50" lean-forward="false" selection-start-line="26" selection-start-column="49" selection-end-line="26" selection-end-column="50" />
+            <state relative-caret-position="200">
+              <caret line="86" column="44" lean-forward="true" selection-start-line="86" selection-start-column="44" selection-end-line="86" selection-end-column="44" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
                 <marker date="1490296350380" expanded="true" signature="461:490" ph="DROP TABLE I... " />
@@ -79,18 +78,18 @@
       <file leaf-file-name="client.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/client.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="20" lean-forward="false" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="20" />
+            <state relative-caret-position="68">
+              <caret line="4" column="47" lean-forward="false" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="client.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="client.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/client.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="26" column="45" lean-forward="true" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
+            <state relative-caret-position="85">
+              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding>
                 <element signature="n#!!doc;n#populate_stock_table#0" expanded="false" />
               </folding>
@@ -124,10 +123,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/static/stylesheet.css" />
-        <option value="$PROJECT_DIR$/templates/client.html" />
         <option value="$PROJECT_DIR$/database_adapter.py" />
-        <option value="$PROJECT_DIR$/static/client.js" />
         <option value="$PROJECT_DIR$/Pear.py" />
+        <option value="$PROJECT_DIR$/templates/client.html" />
+        <option value="$PROJECT_DIR$/static/client.js" />
       </list>
     </option>
   </component>
@@ -864,18 +863,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/client.html">
+    <entry file="file://$PROJECT_DIR$/Pear.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="20" lean-forward="false" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="20" />
-          <folding />
+        <state relative-caret-position="442">
+          <caret line="26" column="27" lean-forward="true" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/database_adapter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="26" column="50" lean-forward="false" selection-start-line="26" selection-start-column="49" selection-end-line="26" selection-end-column="50" />
+        <state relative-caret-position="200">
+          <caret line="86" column="44" lean-forward="true" selection-start-line="86" selection-start-column="44" selection-end-line="86" selection-end-column="44" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
             <marker date="1490296350380" expanded="true" signature="461:490" ph="DROP TABLE I... " />
@@ -901,22 +902,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/client.js">
+    <entry file="file://$PROJECT_DIR$/templates/client.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="26" column="45" lean-forward="true" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
-          <folding>
-            <element signature="n#!!doc;n#populate_stock_table#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="68">
+          <caret line="4" column="47" lean-forward="false" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Pear.py">
+    <entry file="file://$PROJECT_DIR$/static/client.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77">
-          <caret line="26" column="27" lean-forward="true" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
+        <state relative-caret-position="85">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
-            <element signature="e#0#23#0" expanded="true" />
+            <element signature="n#!!doc;n#populate_stock_table#0" expanded="false" />
           </folding>
         </state>
       </provider>
