@@ -1,17 +1,17 @@
-div.container {
-    #border: 1px solid gray;
-    background: deepskyblue;
-    width: 600px;
-    height: 400px;
-    margin-top: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    #margin: 0 auto;
-}
-
 label {
     text-align: right;
     clear: both;
     float: left;
     font-size: small;
+}
+
+td, th {
+  width: 4rem;
+  height: 2rem;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+th {
+  background: lightblue;
+  border-color: white;
 }

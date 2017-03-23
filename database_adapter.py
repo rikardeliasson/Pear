@@ -2,6 +2,7 @@ import sqlite3
 
 from flask import g
 
+
 # connects to the local database
 def connect_db():
     # type: () -> object
@@ -77,3 +78,14 @@ def get_product_by_id(product_id):
 
     u = c.execute("SELECT name FROM products WHERE id = ?", (product_id,))
     return ''.join(u.fetchone())
+
+
+# TODO: add help functions product_exists(product_name) amd storage_exists(storage_name)
+def add_io(ship_date, product_id, storage_id, ship_amount):
+    #type: (Date, int, int, int) -> bool
+    c = get_db()
+
+    c.execute("INSERT INTO io (date, product, storage, amount) VALUES (?,?,?,?)",
+              (ship_date, product_id, storage_id, ship_amount))
+    c.commit()
+    return True
