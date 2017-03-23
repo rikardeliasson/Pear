@@ -11,7 +11,6 @@ function getStorages() {
             if (json.success) {
 
                 document.getElementById('storages').innerHTML = json.data;
-                //document.getElementById("storages").innerHTML = '<p type="text">' + json.data + "</p>";
             }
         }
     };

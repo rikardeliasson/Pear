@@ -84,6 +84,16 @@ def get_product_by_id(product_id):
     return ''.join(u.fetchone())
 
 
+# returns the stock(s) with called storage name
+def get_stock_by_storage_name(storage_name):
+    # type: (str) -> object
+    c = get_db()
+
+    u = c.execute("SELECT * FROM stock WHERE storage = ?", (storage_name,))
+    result = u.fetchall()
+    return result
+
+
 # check if product exists
 def product_exists(product_name):
     # type: (str) -> bool
