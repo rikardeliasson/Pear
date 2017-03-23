@@ -2,6 +2,9 @@
  * Created by skroo_000 on 2017-03-22.
  */
 
+function populate_stock_table(storage_name) {
+    window.alert(storage_name);
+}
 
 function getStorages() {
     var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance
@@ -10,16 +13,18 @@ function getStorages() {
             var json = JSON.parse(this.responseText);
             if (json.success) {
 
-                json.data.forEach(function(item) {
+                json.data.forEach(function(storage_name) {
+
                     document.getElementById("myDropdown").innerHTML +=
-                        '<a>' + item + '</a>';
+                    '<a onclick="populate_stock_table(this.text)" href="javascript:void(0);">' + storage_name + '</a>';
                 })
 
+                //'<a href=' + "get_stock_by_storage_name/" +item+ '>' +item+ '</a>';
                 //document.getElementById('storages').innerHTML = json.data
             }
         }
     };
-    sendGETrequest(xmlhttp, "/print");
+    sendGETrequest(xmlhttp, "/get_storages");
 }
 
 function sendGETrequest(xmlhttp, route){

@@ -23,10 +23,9 @@ def init_db():
     return "Database Initialized"
 
 
-# At this time only for testing
 # returns all storage city names
-@app.route('/print')
-def print_storages():
+@app.route('/get_storages')
+def get_storages():
     storages = db.get_storages()
     if storages is not None:
         return create_response_data(True, "Storages retrieved", storages)
