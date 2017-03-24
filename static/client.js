@@ -7,14 +7,17 @@ function populate_stock_table(stock_data) {
 
     $("#stock_table").tabulator({
         columns:[
-            {title:"Product", field:"product", sortable:true, width:100},
-            {title:"Storage", field:"storage", sortable:true, width:100},
-            {title:"Balance", field:"balance", sortable:true, width:100},
+            {title:"Produkt", field:"product", sortable:true, editable:true, width:100},
+            {title:"Lager", field:"storage", sortable:true, width:100},
+            {title:"Lagersaldo", field:"balance", sortable:true, width:100},
         ],
     });
 
 
     $("#stock_table").tabulator("setData", stock_data);
+
+    //Code to get data from table
+    //var data = $("stock_table").tabulator("getData");
 
 
 }
