@@ -90,7 +90,13 @@ def get_stock_by_storage_name(storage_name):
 
     u = c.execute("SELECT * FROM stock WHERE storage = ?", (storage_name,))
     result = u.fetchall()
-    return result
+    listofdata = []
+    for row in result:
+        data = {"product": row[1]}
+        data["storage"] = row[2]
+        data["balance"] = row[3]
+        listofdata.append(data)
+    return listofdata
 
 
 # check if product exists
