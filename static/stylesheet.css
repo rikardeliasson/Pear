@@ -52,5 +52,9 @@
 .show {display:block;}
 
 #stock_table {
-    width:  300px;
+    width:  450px;
+}
+
+#io_table {
+    width: 600px;
 }

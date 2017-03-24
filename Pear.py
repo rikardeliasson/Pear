@@ -63,6 +63,16 @@ def get_stock_by_storage_name(storage_name):
         return create_response(False, "No such stock")
 
 
+# returns the io(s) with called storage name
+@app.route("/get_io_by_storage_name/<storage_name>")
+def get_io_by_storage_name(storage_name):
+    data = db.get_io_by_storage_name(storage_name)
+    if data is not None:
+        return create_response_data(True, "IO retrieved", data)
+    else:
+        return create_response(False, "No such IO")
+
+
 # adds io shipment
 @app.route("/add_io/<ship_date>/<product_name>/<storage_name>/<ship_amount>")
 def add_io(ship_date, product_name, storage_name, ship_amount):

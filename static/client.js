@@ -2,23 +2,33 @@
  * Created by skroo_000 on 2017-03-22.
  */
 
-
+//Code to get data from table
+//var data = $("stock_table").tabulator("getData");
+//populates the stock table with data from the database
 function populate_stock_table(stock_data) {
 
     $("#stock_table").tabulator({
         columns:[
-            {title:"Produkt", field:"product", sortable:true, editable:true, width:100},
-            {title:"Lager", field:"storage", sortable:true, width:100},
-            {title:"Lagersaldo", field:"balance", sortable:true, width:100},
+            {title:"Produkt", field:"product", sortable:true, editable:true, width:150},
+            {title:"Lager", field:"storage", sortable:true, width:150},
+            {title:"Lagersaldo", field:"balance", sortable:true, width:150},
         ],
     });
 
-
     $("#stock_table").tabulator("setData", stock_data);
+}
 
-    //Code to get data from table
-    //var data = $("stock_table").tabulator("getData");
+function populate_io_table(io_data) {
+    $("#io_table").tabulator({
+        columns:[
+            {title:"Datum", field:"date", sortable:true, editable:true, width:150},
+            {title:"Produkt", field:"product", sortable:true, width:150},
+            {title:"Till/från", field:"storage", sortable:true, width:150},
+            {title:"Antal", field:"amount", sortable:true, width:150},
+        ],
+    });
 
+    $("#io_table").tabulator("setData", io_data);
 
 }
 
@@ -44,14 +54,17 @@ function get_storages() {
     sendGETrequest(xmlhttp, "/get_storages");
 }
 
+//retrieves the stock(s) holding specified storage name
 function get_stock_by_storage_name(storage_name) {
     var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance
     xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             var json = JSON.parse(this.responseText);
             if (json.success) {
-                //window.alert(json.data);
                 populate_stock_table(json.data);
+
+                //note-to-self: trial-and-error
+                get_io_by_storage_name(storage_name);
             }
 
         }
@@ -59,7 +72,21 @@ function get_stock_by_storage_name(storage_name) {
     sendGETrequest(xmlhttp, "/get_stock_by_storage_name/" + storage_name);
 }
 
+//retrieves the io(s) holding specified storage name
+function get_io_by_storage_name(storage_name) {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if(this.readyState == 4 && this.status == 200) {
+            var json = JSON.parse(this.responseText);
+            if(json.success) {
+                populate_io_table(json.data);
+            }
+        }
+    };
+    sendGETrequest(xmlhttp, "/get_io_by_storage_name/" + storage_name);
+}
 
+//help function for construction of GET requests to the server
 function sendGETrequest(xmlhttp, route){
     xmlhttp.open("GET", route, true);
     xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
