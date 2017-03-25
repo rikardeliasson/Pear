@@ -36,18 +36,18 @@ def init():
     c.execute("CREATE TABLE io (id INTEGER PRIMARY KEY, "
               "date DATE NOT NULL, "
               "product INTEGER NOT NULL, "
-              "storage INTEGER NOT NULL, "
-              "amount INTEGER NOT NULL, "
-              "FOREIGN KEY (product) REFERENCES products(id), "
-              "FOREIGN KEY (storage) REFERENCES storages(id))"
+              "storage TEXT NOT NULL, "
+              "amount TEXT NOT NULL) "
+              # "FOREIGN KEY (product) REFERENCES products(id), "
+              # "FOREIGN KEY (storage) REFERENCES storages(id))"
               )
     c.execute("DROP TABLE IF EXISTS stock")
     c.execute("CREATE TABLE stock (id INTEGER PRIMARY KEY, "
               "product INTEGER NOT NULL, "
-              "storage INTEGER NOT NULL, "
-              "balance INTEGER NOT NULL, "
-              "FOREIGN KEY (product) REFERENCES products(id), "
-              "FOREIGN KEY (storage) REFERENCES storages(id))"
+              "storage TEXT NOT NULL, "
+              "balance TEXT NOT NULL) "
+              # "FOREIGN KEY (product) REFERENCES products(id), "
+              # "FOREIGN KEY (storage) REFERENCES storages(id))"
               )
     c.commit()
 

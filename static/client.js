@@ -9,7 +9,7 @@ function populate_stock_table(stock_data) {
 
     $("#stock_table").tabulator({
         columns:[
-            {title:"Produkt", field:"product", sortable:true, editable:true, width:150},
+            {title:"Produkt", field:"product", sortable:true, width:150},
             {title:"Lager", field:"storage", sortable:true, width:150},
             {title:"Lagersaldo", field:"balance", sortable:true, width:150},
         ],
@@ -21,7 +21,7 @@ function populate_stock_table(stock_data) {
 function populate_io_table(io_data) {
     $("#io_table").tabulator({
         columns:[
-            {title:"Datum", field:"date", sortable:true, editable:true, width:150},
+            {title:"Datum", field:"date", sortable:true, width:150},
             {title:"Produkt", field:"product", sortable:true, width:150},
             {title:"Till/från", field:"storage", sortable:true, width:150},
             {title:"Antal", field:"amount", sortable:true, width:150},
@@ -29,6 +29,22 @@ function populate_io_table(io_data) {
     });
 
     $("#io_table").tabulator("setData", io_data);
+    add_io_table();
+
+}
+
+function add_io_table() {
+    $("#add_io_table").tabulator({
+        columns:[
+            {title:"Datum", field:"date", sortable:true, editable:true, width:150},
+            {title:"Produkt", field:"product", sortable:true, editable:true, width:150},
+            {title:"Till/från", field:"storage", sortable:true, editable:true, width:150},
+            {title:"Antal", field:"amount", sortable:true, editable:true, width:150},
+        ],
+    });
+
+    var new_io_data = [{"date":"", "product":"", "storage":"", "amount":""}];
+    $("#add_io_table").tabulator("setData", new_io_data);
 
 }
 
@@ -45,9 +61,6 @@ function get_storages() {
                     document.getElementById("myDropdown").innerHTML +=
                     '<a onclick="get_stock_by_storage_name(this.text)" href="javascript:void(0);">' + storage_name + '</a>';
                 })
-
-                //'<a href=' + "get_stock_by_storage_name/" +item+ '>' +item+ '</a>';
-                //document.getElementById('storages').innerHTML = json.data
             }
         }
     };
