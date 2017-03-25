@@ -1,5 +1,6 @@
 from flask import Flask
 from flask import render_template
+from flask import request
 
 import database_adapter as db
 import json
@@ -74,8 +75,13 @@ def get_io_by_storage_name(storage_name):
 
 
 # adds io shipment
-@app.route("/add_io/<ship_date>/<product_name>/<storage_name>/<ship_amount>")
-def add_io(ship_date, product_name, storage_name, ship_amount):
+@app.route("/add_io/", methods=['POST'])
+def add_io():
+    data = json.loads(unicode(request.data, "ISO-8859-1"))
+    ship_date = data[0]['date']
+    product_name = data[0]['product']
+    storage_name = data[0]['storage']
+    ship_amount = data[0]['amount']
     if db.add_io(ship_date, product_name, storage_name, ship_amount):
         return create_response(True, "io created")
     else:

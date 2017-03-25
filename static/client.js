@@ -29,6 +29,8 @@ function populate_io_table(io_data) {
     });
 
     $("#io_table").tabulator("setData", io_data);
+    //var data = $("add_io_table").tabulator("getData");
+    //console.log(data);
     add_io_table();
 
 }
@@ -36,16 +38,24 @@ function populate_io_table(io_data) {
 function add_io_table() {
     $("#add_io_table").tabulator({
         columns:[
-            {title:"Datum", field:"date", sortable:true, editable:true, width:150},
-            {title:"Produkt", field:"product", sortable:true, editable:true, width:150},
-            {title:"Till/från", field:"storage", sortable:true, editable:true, width:150},
-            {title:"Antal", field:"amount", sortable:true, editable:true, width:150},
+            {title:"Datum", field:"date", sortable:true, editable:true, editor:"input", width:150},
+            {title:"Produkt", field:"product", sortable:true, editable:true, editor:"input", width:150},
+            {title:"Till/från", field:"storage", sortable:true, editable:true, editor:"input", width:150},
+            {title:"Antal", field:"amount", sortable:true, editable:true, editor:"input", width:150},
         ],
     });
 
-    var new_io_data = [{"date":"", "product":"", "storage":"", "amount":""}];
+    var new_io_data = [{"date":"2017-03-25", "product":"jPlatta", "storage":"Cupertino", "amount":"10"}];
     $("#add_io_table").tabulator("setData", new_io_data);
+}
 
+function add_io_to_table() {
+    var data = $("#add_io_table").tabulator("getData");
+    console.log(JSON.stringify(data));
+
+    var json = JSON.stringify(data);
+    var xmlhttp = new XMLHttpRequest();
+    sendPOSTrequest(xmlhttp,"add_io/",json)
 }
 
 //retrieves the storage names and injects them in drop-down menu
@@ -106,6 +116,11 @@ function sendGETrequest(xmlhttp, route){
     xmlhttp.send();
 }
 
+function sendPOSTrequest(xmlhttp, route, data){
+    xmlhttp.open("POST", route, true);
+    xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    xmlhttp.send(data);
+}
 
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
