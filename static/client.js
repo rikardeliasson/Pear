@@ -29,32 +29,35 @@ function populate_io_table(io_data) {
     });
 
     $("#io_table").tabulator("setData", io_data);
-    //var data = $("add_io_table").tabulator("getData");
-    //console.log(data);
-    add_io_table();
+    add_io_table(io_data[0]["storage"]);
 
 }
 
-function add_io_table() {
+function add_io_table(storage_name) {
     $("#add_io_table").tabulator({
         columns:[
             {title:"Datum", field:"date", sortable:true, editable:true, editor:"input", width:150},
             {title:"Produkt", field:"product", sortable:true, editable:true, editor:"input", width:150},
-            {title:"Till/från", field:"storage", sortable:true, editable:true, editor:"input", width:150},
+            {title:"Till/från", field:"storage", sortable:true, width:150},
             {title:"Antal", field:"amount", sortable:true, editable:true, editor:"input", width:150},
         ],
     });
-
-    var new_io_data = [{"date":"2017-03-25", "product":"jPlatta", "storage":"Cupertino", "amount":"10"}];
+    var new_io_data = [{"date":"", "product":"", "storage":storage_name, "amount":""}];
     $("#add_io_table").tabulator("setData", new_io_data);
 }
 
 function add_io_to_table() {
     var data = $("#add_io_table").tabulator("getData");
-    console.log(JSON.stringify(data));
-
     var json = JSON.stringify(data);
     var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            var json = JSON.parse(this.responseText);
+            if (json.success) {
+                get_io_by_storage_name(data[0]["storage"])
+            }
+        }
+    };
     sendPOSTrequest(xmlhttp,"add_io/",json)
 }
 
@@ -69,7 +72,7 @@ function get_storages() {
                 json.data.forEach(function(storage_name) {
 
                     document.getElementById("myDropdown").innerHTML +=
-                    '<a onclick="get_stock_by_storage_name(this.text)" href="javascript:void(0);">' + storage_name + '</a>';
+                    '<a id="storage_name" onclick="get_stock_by_storage_name(this.text)" href="javascript:void(0);">' + storage_name + '</a>';
                 })
             }
         }

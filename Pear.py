@@ -77,7 +77,7 @@ def get_io_by_storage_name(storage_name):
 # adds io shipment
 @app.route("/add_io/", methods=['POST'])
 def add_io():
-    data = json.loads(unicode(request.data, "ISO-8859-1"))
+    data = json.loads(unicode(request.data, "UTF-8"))
     ship_date = data[0]['date']
     product_name = data[0]['product']
     storage_name = data[0]['storage']
