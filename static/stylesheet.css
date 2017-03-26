@@ -73,6 +73,11 @@
     font-family: Montserrat;
 }
 
+#button_container {
+    width: 100%;
+    text-align: center;
+}
+
 #storage_area {
     float: left;
     width: 450px;

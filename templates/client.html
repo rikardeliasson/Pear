@@ -6,6 +6,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tabulator/2.11.0/tabulator.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tabulator/2.11.0/tabulator.min.js"></script>
     <script src="../static/client.js"></script>
     <link rel="stylesheet" href="../static/stylesheet.css">
@@ -22,11 +23,13 @@
      </div>
 
      <!--Dropdown menu for selection of storage-->
-     <div class="dropdown">
-         <button onclick="myFunction()" class="dropbtn">Välj Lager</button>
-         <!--the script injects the storages into the list-->
-         <div id="myDropdown" class="dropdown-content"></div>
-         <script>get_storages()</script>
+     <div id="button_container">
+         <div class="dropdown">
+             <button onclick="myFunction()" class="dropbtn">Välj Lager <i class="fa fa-angle-down"></i></button>
+             <!--the script injects the storages into the list-->
+             <div id="myDropdown" class="dropdown-content"></div>
+             <script>get_storages()</script>
+         </div>
      </div>
 
     <div id="storage_area">
