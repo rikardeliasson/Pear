@@ -20,16 +20,17 @@
         <div id="screen_title">
             <h1><b>LAGERHANTERARE</b></h1>
         </div>
-     </div>
 
-     <!--Dropdown menu for selection of storage-->
-     <div id="button_container">
-         <div class="dropdown">
-             <button onclick="myFunction()" class="dropbtn">Välj Lager <i class="fa fa-angle-down"></i></button>
-             <!--the script injects the storages into the list-->
-             <div id="myDropdown" class="dropdown-content"></div>
-             <script>get_storages()</script>
-         </div>
+
+        <!--Dropdown menu for selection of storage-->
+        <div id="button_container">
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">Välj Lager <i class="fa fa-angle-down"></i></button>
+                <!--the script injects the storages into the list-->
+                <div id="myDropdown" class="dropdown-content"></div>
+                <script>get_storages()</script>
+            </div>
+        </div>
      </div>
 
     <div id="storage_area">
@@ -38,13 +39,15 @@
     </div>
 
     <div id="io_area">
-        <h1>In- och utleverans</h1>
-        <div id="io_table"></div>
-
-        <h4>Lägg till in/utleverans</h4>
+        <h1>Lägg till in/utleverans</h1>
         <!--<script>add_io_table()</script>-->
         <div id="add_io_table"></div>
         <button onclick="add_io_to_table()" class="io_button">Spara</button>
+
+        <h1>Översikt in- och utleverans</h1>
+        <div id="io_table"></div>
+
+
     </div>
 </body>
 </html>

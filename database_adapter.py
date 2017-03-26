@@ -92,9 +92,7 @@ def get_stock_by_storage_name(storage_name):
     result = u.fetchall()
     list_of_data = []
     for row in result:
-        data = {"product": row[1]}
-        data["storage"] = row[2]
-        data["balance"] = row[3]
+        data = {"product": row[1], "storage": row[2], "balance": row[3]}
         list_of_data.append(data)
     return list_of_data
 
@@ -108,10 +106,7 @@ def get_io_by_storage_name(storage_name):
     result = u.fetchall()
     list_of_data = []
     for row in result:
-        data = {"date": row[1]}
-        data["product"] = row[2]
-        data["storage"] = row[3]
-        data["amount"] = row[4]
+        data = {"date": row[1], "product": row[2], "storage": row[3], "amount": row[4]}
         list_of_data.append(data)
     return list_of_data
 

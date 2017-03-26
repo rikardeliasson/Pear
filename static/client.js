@@ -11,8 +11,8 @@ function populate_stock_table(stock_data) {
         columns:[
             {title:"Produkt", field:"product", sortable:true, width:150},
             {title:"Lager", field:"storage", sortable:true, width:150},
-            {title:"Lagersaldo", field:"balance", sortable:true, width:150},
-        ],
+            {title:"Lagersaldo", field:"balance", sortable:true, width:150}
+        ]
     });
 
     $("#stock_table").tabulator("setData", stock_data);
@@ -24,8 +24,8 @@ function populate_io_table(io_data) {
             {title:"Datum", field:"date", sortable:true, width:150},
             {title:"Produkt", field:"product", sortable:true, width:150},
             {title:"Till/från", field:"storage", sortable:true, width:150},
-            {title:"Antal", field:"amount", sortable:true, width:150},
-        ],
+            {title:"Antal", field:"amount", sortable:true, width:150}
+        ]
     });
 
     $("#io_table").tabulator("setData", io_data);
@@ -39,8 +39,8 @@ function add_io_table(storage_name) {
             {title:"Datum", field:"date", sortable:true, editable:true, editor:"input", width:150},
             {title:"Produkt", field:"product", sortable:true, editable:true, editor:"input", width:150},
             {title:"Till/från", field:"storage", sortable:true, width:150},
-            {title:"Antal", field:"amount", sortable:true, editable:true, editor:"input", width:150},
-        ],
+            {title:"Antal", field:"amount", sortable:true, editable:true, editor:"input", width:150}
+        ]
     });
     var new_io_data = [{"date":"", "product":"", "storage":storage_name, "amount":""}];
     $("#add_io_table").tabulator("setData", new_io_data);
@@ -82,6 +82,8 @@ function get_storages() {
 
 //retrieves the stock(s) holding specified storage name
 function get_stock_by_storage_name(storage_name) {
+    document.getElementById("storage_area").style.display = 'block';
+    document.getElementById("io_area").style.display = 'block';
     var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance
     xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
@@ -112,6 +114,7 @@ function get_io_by_storage_name(storage_name) {
     sendGETrequest(xmlhttp, "/get_io_by_storage_name/" + storage_name);
 }
 
+
 //help function for construction of GET requests to the server
 function sendGETrequest(xmlhttp, route){
     xmlhttp.open("GET", route, true);
@@ -119,11 +122,13 @@ function sendGETrequest(xmlhttp, route){
     xmlhttp.send();
 }
 
+
 function sendPOSTrequest(xmlhttp, route, data){
     xmlhttp.open("POST", route, true);
     xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     xmlhttp.send(data);
 }
+
 
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
@@ -144,4 +149,4 @@ window.onclick = function(event) {
       }
     }
   }
-}
+};
