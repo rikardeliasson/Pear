@@ -146,13 +146,17 @@ def add_io(ship_date, product_name, storage_name, ship_amount):
         return False
 
 
-# adds stock
-def add_stock(product_name, storage_name, current_balance):
+# updates stock balance
+def update_stock(product_name, storage_name, add_to_balance):
     # type: (string, string, int) -> bool
     c = get_db()
     if product_exists(product_name) and storage_exists(storage_name):
+        u = c.execute("SELECT * FROM stock WHERE product = ? AND storage = ?", (product_name, storage_name))
+        result = u.fetchone()
+        new_balance = int(result[3]) + int(add_to_balance)
+        c.execute("DELETE FROM stock WHERE product = ? AND storage = ?", (product_name, storage_name))
         c.execute("INSERT INTO stock (product, storage, balance) VALUES (?,?,?)",
-                  (product_name, storage_name, current_balance))
+                  (product_name, storage_name, new_balance))
         c.commit()
         return True
     else:

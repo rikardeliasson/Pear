@@ -49,16 +49,35 @@ function add_io_table(storage_name) {
 function add_io_to_table() {
     var data = $("#add_io_table").tabulator("getData");
     var json = JSON.stringify(data);
+    if(data[0]['date'] == '') {
+        update_stock(data);
+    }
+    else {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                var json = JSON.parse(this.responseText);
+                if (json.success) {
+                    get_io_by_storage_name(data[0]["storage"])
+                }
+            }
+        };
+        sendPOSTrequest(xmlhttp, "add_io/", json)
+    }
+}
+
+function update_stock(data) {
+    var json = JSON.stringify(data);
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             var json = JSON.parse(this.responseText);
             if (json.success) {
-                get_io_by_storage_name(data[0]["storage"])
+                get_stock_by_storage_name(data[0]['storage']);
             }
         }
     };
-    sendPOSTrequest(xmlhttp,"add_io/",json)
+    sendPOSTrequest(xmlhttp, "update_stock/", json);
 }
 
 //retrieves the storage names and injects them in drop-down menu
@@ -91,7 +110,6 @@ function get_stock_by_storage_name(storage_name) {
             if (json.success) {
                 populate_stock_table(json.data);
 
-                //note-to-self: trial-and-error
                 get_io_by_storage_name(storage_name);
             }
 

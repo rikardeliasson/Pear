@@ -88,13 +88,18 @@ def add_io():
         return create_response(False, "Failed to create io")
 
 
-# adds stock
-@app.route("/add_stock/<product_name>/<storage_name>/<current_balance>")
-def add_stock(product_name, storage_name, current_balance):
-    if db.add_stock(product_name, storage_name, current_balance):
-        return create_response(True, "stock created")
+# updates stock balance
+@app.route("/update_stock/", methods=['POST'])
+def update_stock():
+    data = json.loads(unicode(request.data, "UTF-8"))
+    product_name = data[0]['product']
+    storage_name = data[0]['storage']
+    add_to_balance = data[0]['amount']
+
+    if db.update_stock(product_name, storage_name, add_to_balance):
+        return create_response(True, "stock updated")
     else:
-        return create_response(False, "Failed to create stock")
+        return create_response(False, "Failed to update stock")
 
 
 # creates a JSON response with additional data
