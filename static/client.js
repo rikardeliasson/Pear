@@ -2,8 +2,6 @@
  * Created by skroo_000 on 2017-03-22.
  */
 
-//Code to get data from table
-//var data = $("stock_table").tabulator("getData");
 //populates the stock table with data from the database
 function populate_stock_table(stock_data) {
 
@@ -18,6 +16,8 @@ function populate_stock_table(stock_data) {
     $("#stock_table").tabulator("setData", stock_data);
 }
 
+
+//populates the io_table with io shipment data from the database
 function populate_io_table(io_data) {
     $("#io_table").tabulator({
         columns:[
@@ -33,6 +33,8 @@ function populate_io_table(io_data) {
 
 }
 
+
+//creates table for new io shipment data
 function add_io_table(storage_name) {
     $("#add_io_table").tabulator({
         columns:[
@@ -46,6 +48,8 @@ function add_io_table(storage_name) {
     $("#add_io_table").tabulator("setData", new_io_data);
 }
 
+
+//adds data from editing table to io_table
 function add_io_to_table() {
     var data = $("#add_io_table").tabulator("getData");
     var json = JSON.stringify(data);
@@ -66,6 +70,7 @@ function add_io_to_table() {
     }
 }
 
+//updates stock_table by adding/subtracting amount provided in editing table
 function update_stock(data) {
     var json = JSON.stringify(data);
     var xmlhttp = new XMLHttpRequest();
@@ -79,6 +84,7 @@ function update_stock(data) {
     };
     sendPOSTrequest(xmlhttp, "update_stock/", json);
 }
+
 
 //retrieves the storage names and injects them in drop-down menu
 function get_storages() {
@@ -99,6 +105,7 @@ function get_storages() {
     sendGETrequest(xmlhttp, "/get_storages");
 }
 
+
 //retrieves the stock(s) holding specified storage name
 function get_stock_by_storage_name(storage_name) {
     document.getElementById("storage_area").style.display = 'block';
@@ -117,6 +124,7 @@ function get_stock_by_storage_name(storage_name) {
     };
     sendGETrequest(xmlhttp, "/get_stock_by_storage_name/" + storage_name);
 }
+
 
 //retrieves the io(s) holding specified storage name
 function get_io_by_storage_name(storage_name) {
@@ -141,6 +149,7 @@ function sendGETrequest(xmlhttp, route){
 }
 
 
+//help function for construction of POST request to the server
 function sendPOSTrequest(xmlhttp, route, data){
     xmlhttp.open("POST", route, true);
     xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
@@ -153,6 +162,7 @@ toggle between hiding and showing the dropdown content */
 function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
 }
+
 
 // Close the dropdown menu if the user clicks outside of it
 window.onclick = function(event) {

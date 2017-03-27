@@ -128,11 +128,6 @@ def storage_exists(storage_name):
     return u.fetchone() is not None
 
 
-# TODO: if found necessary, provide help functions for duplicate prevention
-# for the time being, we believe that two shipments by all means could occur at the same date,
-# from the same storage, with equal amount of the same product.
-# Lets say there is a main storage that distributes a product evenly
-# Possibly next release: id based on order number or similar existing identifier for shipment.
 # adds io shipment
 def add_io(ship_date, product_name, storage_name, ship_amount):
     # type: (Date, string, string, int) -> bool
